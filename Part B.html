@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Column Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color:pink; /* Changed background color */
+            font-size: 16px; /* Changed font size */
+        }
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        .column {
+            flex: 1;
+            background-color: #fff; /* Changed background color */
+            padding: 20px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-right: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Added box shadow */
+        }
+        /* Clearfix to prevent margin collapsing */
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                /* No need to specify flex-direction for horizontal layout */
+                align-items: stretch;
+            }
+            .column {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to our Hotel</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Rooms</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <p>Welcome to our krishna hotel where you can experience  the ultimate comfortn and relaxation.Our hotel offers you different types of tiffens,ice creams,chats and jucies etc and we also server food fast with high hygiene.</p>
+    <div class="container">
+        <div class="column">
+            <h2>Tiffens</h2>
+            <p>Masala Dosa</p>
+            <p>Idli Sambar</p>
+            <p>Upma</p>
+            <p>Aloo Paratha</p>
+            <p>puri sagu</p>
+            <p>Palav</p>
+            <p>Puliyogare</p>
+			</br>
+        <h2>Chats</h2>
+            <p>Masala puri</p>
+            <p>Pani puri</p>
+            <p>Bhel puri</p>
+            <p>Samosa</p>
+			<p>Pav Bhaji</p>
+       
+		 <h2>Ice Cream</h2>
+            <p>Gudbad</p>
+            <p>Kulfi</p>
+            <p>Raja Rani</p>
+            <p>Vanilla</p>
+			<p>Fruit Salad</p>
+        </br>
+        <h2>Juice</h2>
+            <p>Orange juice</p>
+            <p>Mango juice</p>
+            <p>Pineapple juice</p>
+            <p>Grapes juice</p>
+            <p>Pomogranate juice</p>
+            <p>Strawberry juice</p>
+            <p>Lemon juice</p>
+			</br>
+        </div>
+</body>
+</html>
